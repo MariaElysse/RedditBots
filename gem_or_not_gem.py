@@ -39,7 +39,7 @@ print "Loaded /r/circlejerk/"
 gong=get_redditor(user)
 
 while True:
-	for comment in circlejerk.get_comments(limit=1000):
+  for comment in circlejerk.get_comments(limit=1000):
 		if comment.body not in ["NOT GEM","GEM"] and comment.id not in already_done:
 			if random.randint(1,10)>4:
 				try:
