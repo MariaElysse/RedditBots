@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Reddit bot that posts random /r/circlejerk comments 
-to submissions on /r/botcirclejerk. 
+
+"""Reddit bot that posts random /r/circlejerk comments
+to submissions on /r/botcirclejerk.
 Python 2.7 (as evidenced by the Unicode madness)
 
-I also used this bot to practise my SQL(ite) skills. 
+I also used this bot to practise my SQL(ite) skills.
 Needless to say, not very much in that department"""
 
 
@@ -69,3 +70,4 @@ while True:
 				print "Posted reply"
 			else:
 				print "Nothing posted."
+

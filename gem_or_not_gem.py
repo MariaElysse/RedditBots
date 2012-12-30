@@ -25,7 +25,7 @@ random.seed()
 session=praw.Reddit(user_agent=user_agent)
 session.login(user,passwd)
 
-#You could do that with no args for an interactive prompt
+#You could do that with no args for an interactive prompt.
 
 already_done=pickle.load(jerenept_data)
 
