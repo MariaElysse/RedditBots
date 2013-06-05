@@ -21,7 +21,7 @@ gem_data=open("gem.data","r+")
 # This program writes a serialised list to the disk after every comment
 #(bad for SSDs I would assume)
 
-print "Loaded datafile"
+print("Loaded datafile")
 
 random.seed()
 #initialise the session
@@ -36,7 +36,7 @@ already_done=pickle.load(gem_data)
 print("""Success, logged in as
 User: "{0}"
 Pass: "{1}"
-User-agent: "{2}""""".format(user,passwd,user_agent)
+User-agent: "{2}""""".format(user,passwd,user_agent))
 circlejerk=session.get_subreddit('circlejerk')
 print("Loaded /r/circlejerk/")
 
@@ -48,7 +48,7 @@ while True:
 					comment.reply("GEM")
 					print("Responded to {0}: 'GEM'".format(comment.body)
 				except praw.errors.RateLimitExceeded as detail:
-					print( " Rate Limited. Waiting for Reddit to stop complaining: {0} minutes" .format(str(detail).split(' ')[9]) )
+					print(" Rate Limited. Waiting for Reddit to stop complaining: {0} minutes" .format(str(detail).split(' ')[9]))
 					print( str(detail))
 					time.sleep(int(str(detail).split(' ')[9])*60)
 					comment.reply("GEM")
@@ -67,5 +67,5 @@ while True:
 			pickle.dump(already_done,gem_data)
 			gem_data.close()
 			gem_data=open("gem.data","r+")
-			print( "Waiting 120 seconds before posting again." )
+			print("Waiting 120 seconds before posting again.")
 			time.sleep(120)
